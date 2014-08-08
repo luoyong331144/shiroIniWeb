@@ -1,3 +1,5 @@
+The shiro application based on web.
+===================================
 #### pom.xml
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -179,11 +181,11 @@ public class LoginServlet extends HttpServlet {
 		try {
 			subject.login(token);
 		} catch(UnknownAccountException e) {
-			loginErrorMsg = "²éÎÞ´ËÈË£¡";
+			loginErrorMsg = "æŸ¥æ— æ­¤äººï¼";
 		} catch(IncorrectCredentialsException e) {
-			loginErrorMsg = "ÃÜÂë´íÎó£¡";
+			loginErrorMsg = "å¯†ç é”™è¯¯ï¼";
 		} catch(AuthenticationException e) {
-			loginErrorMsg = "µÇÂ½Ê§°Ü£¡";
+			loginErrorMsg = "ç™»é™†å¤±è´¥ï¼";
 		}
 		
 		request.setAttribute("loginErrorMsg", loginErrorMsg);
